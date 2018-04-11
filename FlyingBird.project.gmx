@@ -37,7 +37,7 @@
     <sprites name="spr_grp_UI">
       <sprite>sprites\spr_pause_button</sprite>
       <sprite>sprites\spr_scorebox</sprite>
-      <sprite>sprites\sor_black</sprite>
+      <sprite>sprites\spr_black</sprite>
       <sprite>sprites\spr_pause1</sprite>
       <sprite>sprites\spr_pause2</sprite>
       <sprite>sprites\spr_pause_menu_button</sprite>
