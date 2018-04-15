@@ -29,6 +29,7 @@
 
 global.pause = false;
 global.mode = 1;
+global.main_room = room;
 instance_create(0, 0, obj_drag2_control);
 instance_create(0, 0, obj_tilt_control);
 instance_deactivate_object(obj_tilt_control);
@@ -43,6 +44,14 @@ instance_create(765, 32, obj_UI);
 instance_create(0, 0, obj_turbulence_control);
 alarm[2] = 300;
 i = 0;
+
+// init enemy models, which will later be used to 
+// contain the coordinates of the enemies wanted to create. 
+global.enemy_A_model = 0;
+global.enemy_B_model = 0;
+global.enemy_C_model = 0;
+
+
 
 
 
@@ -78,6 +87,9 @@ i = 0;
 //    global.sky_type = 4;
 
 //alarm[2] = 300;
+
+// test calling enemy from other stage rooms
+script_execute(scr_call_enemy_from_stage, 1);
 </string>
           </argument>
         </arguments>
@@ -100,8 +112,51 @@ i = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>i++;
-show_debug_message(string(i));
+            <string>/// generate stage enemy
+
+// if coming back from other stage rooms, 
+// the enemy model will be an array containing the coordinate info
+
+// for enemy A
+if (is_array(global.enemy_A_model)) 
+{
+    for(var i = 0; i &lt; array_height_2d(global.enemy_A_model); i++)
+    {
+        // generate new enemy instances accoring to the coordinates 
+        instance_create(global.enemy_A_model[i, 0], global.enemy_A_model[i, 1], obj_enemy_A);   
+    }
+    // reset the array
+    global.enemy_A_model = 0;
+    room_persistent = false;
+}
+
+// for enemy B
+if (is_array(global.enemy_B_model)) 
+{
+    for(var i = 0; i &lt; array_height_2d(global.enemy_B_model); i++)
+    {
+        // generate new enemy instances accoring to the coordinates
+        instance_create(global.enemy_B_model[i, 0], global.enemy_B_model[i, 1], obj_enemy_B);   
+    }
+    // reset the array
+    global.enemy_B_model = 0;
+    room_persistent = false;
+}
+
+
+// for enemy C
+if (is_array(global.enemy_C_model)) 
+{
+    for(var i = 0; i &lt; array_height_2d(global.enemy_C_model); i++)
+    {
+        // generate new enemy instances accoring to the coordinates
+        instance_create(global.enemy_C_model[i, 0], global.enemy_C_model[i, 1], obj_enemy_C);   
+    }
+    // reset the array
+    global.enemy_C_model = 0;
+    room_persistent = false;
+}
+
 </string>
           </argument>
         </arguments>

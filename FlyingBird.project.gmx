@@ -64,9 +64,15 @@
       <script>scripts\scr_create_enemy_linear.gml</script>
       <script>scripts\scr_create_enemy_wavelike.gml</script>
     </scripts>
-    <script>scripts\scr_create_random_tur_ver.gml</script>
-    <script>scripts\scr_create_random_tur_hor.gml</script>
     <script>scripts\scr_set_sky_sprite.gml</script>
+    <scripts name="scr_grp_stage">
+      <script>scripts\scr_stage_room_init.gml</script>
+      <script>scripts\scr_call_enemy_from_stage.gml</script>
+    </scripts>
+    <scripts name="scr_grp_turbulence">
+      <script>scripts\scr_create_random_tur_ver.gml</script>
+      <script>scripts\scr_create_random_tur_hor.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_scores</font>
@@ -79,6 +85,9 @@
       <object>objects\obj_enemy_B</object>
       <object>objects\obj_enemy_control</object>
       <object>objects\obj_enemy_C</object>
+      <object>objects\obj_enemy_A_model</object>
+      <object>objects\obj_enemy_B_model</object>
+      <object>objects\obj_enemy_C_model</object>
     </objects>
     <objects name="obj_grp_turbulence">
       <object>objects\obj_turbulence_control</object>

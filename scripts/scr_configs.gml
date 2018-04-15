@@ -44,4 +44,3 @@ global.enemy_C_harm = 10;
 global.tur_ver_delta_speed = 20;
 global.tur_hor_delta_speed = 50;
 
-
