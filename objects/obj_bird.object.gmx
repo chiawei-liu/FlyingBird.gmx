@@ -160,7 +160,7 @@ if(global.pause)
     if(ds_queue_size(sprchange_que)&gt;global.sprchange_frame){
         sprchange_que_total-=ds_queue_dequeue(sprchange_que);
     }
-    if(sprchange_que_total&gt;global.sprchange_food){//变身
+    if(sprchange_que_total&gt;=global.sprchange_food){//变身
         spr=2;
         sprite_index=spr_pause_button;
         //ds_queue_destroy(sprchange_que);
