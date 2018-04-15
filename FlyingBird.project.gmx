@@ -41,7 +41,6 @@
       <sprite>sprites\spr_pause1</sprite>
       <sprite>sprites\spr_pause2</sprite>
       <sprite>sprites\spr_pause_menu_button</sprite>
-      <sprite>sprites\spr_HP</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -119,8 +118,12 @@
       <object>objects\obj_sky</object>
       <object>objects\obj_sky_control</object>
     </objects>
+    <objects name="obj_index">
+      <object>objects\obj_index_playbutton</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\index</room>
     <room>rooms\room0</room>
     <room>rooms\stage1</room>
   </rooms>

@@ -57,11 +57,7 @@ dragging = 0;
 
 if (device_mouse_check_button_pressed(0, mb_left))
 {
-    bird = instance_position(mouse_x, mouse_y, obj_bird)
-    if (bird != noone)
-    {
-        dragging = 1;
-    }
+    dragging=1;
 }
 
 if (device_mouse_check_button_released(0, mb_left))

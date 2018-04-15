@@ -15,4 +15,3 @@ for(i = 0; i < food_amount; i++)
 {
     instance_create(start_x + i*delta_x, start_y + m*i*delta_x, obj_enemy_A);
 }
-

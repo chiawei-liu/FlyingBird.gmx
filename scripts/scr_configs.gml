@@ -14,6 +14,10 @@ global.max_swipeDistance = 1500;
 global.swipe_triggered_distance = 300;
 global.tilt_triggered_degree = 20;
 global.drag_triggered_distance = 30;
+//鸟变身的条件：在sprchange_frame的帧数（1秒有room0.Speed这么多帧）内吃到sprchange_food个豆豆
+var s=asset_get_index(room0).room_speed;
+global.sprchange_frame=s*5;
+global.sprchange_food=10;
 
 // food related
 global.food_spacing = 100;
@@ -43,4 +47,3 @@ global.enemy_C_harm = 10;
 // turbulenc related
 global.tur_ver_delta_speed = 20;
 global.tur_hor_delta_speed = 50;
-

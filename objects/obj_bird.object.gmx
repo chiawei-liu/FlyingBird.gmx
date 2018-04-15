@@ -41,6 +41,10 @@ swipe_dir = 0;
 x_0 = x;
 max_HP = global.bird_max_HP;
 HP = global.bird_max_HP;
+sprchange_que=ds_queue_create();//存储在最近global.sprchange_frame帧内每一帧吃到的豆豆
+sprchange_que_total=0;//队列sprchange_que的和，&gt;=global.sprchange_food时变身
+getfood=0;//这一帧吃了几个豆豆
+spr=1;//1没变身，2变身了
 </string>
           </argument>
         </arguments>
@@ -130,6 +134,120 @@ if(x - sprite_get_width(spr_bird)/2 + hspeed &lt; 0)
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// sprite updater
+if(global.pause)
+    exit;
+
+//if(spr&lt;=1){
+    sprchange_que_total+=getfood;
+    ds_queue_enqueue(sprchange_que,getfood);
+    if(ds_queue_size(sprchange_que)&gt;global.sprchange_frame){
+        sprchange_que_total-=ds_queue_dequeue(sprchange_que);
+    }
+    if(sprchange_que_total&gt;global.sprchange_food){//变身
+        spr=2;
+        sprite_index=spr_pause_button;
+        //ds_queue_destroy(sprchange_que);
+    }
+//}
+    
+delta_x = x - x_0;
+x_0 = x;
+old_image_index = image_index;
+
+if(buffed)
+{
+    if(delta_x &gt;0)
+        sprStatus = 3;
+    else if(delta_x == 0)
+        sprStatus = 2;
+    else
+        sprStatus = 1;
+}
+else
+{
+    if(delta_x &gt;0)
+        sprStatus = -3;
+    else if(delta_x == 0)
+        sprStatus = -2;
+    else
+        sprStatus = -1;
+}
+
+if(sprStatus != oldSprStatus)
+{
+    switch(sprStatus)
+    {
+    case -3:
+        //if(spr==2)sprite_index = spr2_bird_right; 
+        sprite_index = spr_bird_right;
+        break;
+    case -2:
+        sprite_index = spr_bird;
+        break;
+    case -1:
+        sprite_index = spr_bird_left;
+        break;
+    case 1:            
+        sprite_index = spr_bird_left_shining;
+        break;
+    case 2:
+        sprite_index = spr_shining; //spr_bird_shining;
+        break;
+    case 3:
+        sprite_index = spr_bird_right_shining;
+        break;
+    }
+    if(oldSprStatus == -sprStatus)
+        image_index = old_image_index;
+    oldSprStatus = sprStatus;
+    //if(spr&gt;1)sprite_index=spr_pause_button;
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Init getfood
+getfood=0;
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="3" enumb="0">
       <action>
@@ -195,81 +313,6 @@ if(global.pause)
     alarm[2] += 1;
     x -= hspeed;
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// sprite updater
-if(global.pause)
-    exit;
-    
-delta_x = x - x_0;
-x_0 = x;
-old_image_index = image_index;
-
-if(buffed)
-{
-    if(delta_x &gt;0)
-        sprStatus = 3;
-    else if(delta_x == 0)
-        sprStatus = 2;
-    else
-        sprStatus = 1;
-}
-else
-{
-    if(delta_x &gt;0)
-        sprStatus = -3;
-    else if(delta_x == 0)
-        sprStatus = -2;
-    else
-        sprStatus = -1;
-}
-
-if(sprStatus != oldSprStatus)
-{
-    switch(sprStatus)
-    {
-    case -3:
-        sprite_index = spr_bird_right;
-        break;
-    case -2:
-        sprite_index = spr_bird;
-        break;
-    case -1:
-        sprite_index = spr_bird_left;
-        break;
-    case 1:            
-        sprite_index = spr_bird_left_shining;
-        break;
-    case 2:
-        sprite_index = spr_shining; //spr_bird_shining;
-        break;
-    case 3:
-        sprite_index = spr_bird_right_shining;
-        break;
-    }
-    if(oldSprStatus == -sprStatus)
-        image_index = old_image_index;
-    oldSprStatus = sprStatus;
-}
-
 </string>
           </argument>
         </arguments>
@@ -372,7 +415,7 @@ if(buffed == 0)
     bird_ver_speed += global.bird_buff_speed;
 }
 buffed = 1;
-
+getfood+=1;
 
 </string>
           </argument>
