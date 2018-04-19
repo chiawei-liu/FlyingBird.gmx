@@ -27,10 +27,10 @@
             <kind>1</kind>
             <string>draw_set_font(fnt_scores);
 draw_set_colour(c_white);
-instance_create(48, 72, obj_pause_button);
-instance_create(765, 32, obj_scorebox);
-mask_surface = surface_create(256, 256);
-clip_surface = surface_create(256, 256);
+instance_create(991, 123, obj_pause_button);
+instance_create(0, 129, obj_scorebox);
+mask_surface = surface_create(1024, 1024);
+clip_surface = surface_create(1024, 1024);
 </string>
           </argument>
         </arguments>
@@ -78,9 +78,11 @@ clip_surface = surface_create(256, 256);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_halign(fa_right);
-draw_text(1030, 145, string(obj_bird.player_score));
-draw_text(963, 68, string(obj_bird.height))
+            <string>/// draw score
+
+draw_set_halign(fa_left);
+draw_text(300, 148, string(obj_bird.player_score));
+draw_text(36, 148, string(obj_bird.height) + " m");
 </string>
           </argument>
         </arguments>
@@ -105,20 +107,21 @@ draw_text(963, 68, string(obj_bird.height))
 
 if (!surface_exists(mask_surface)) {
     // create the mask-surface, if needed
-    mask_surface = surface_create(256, 256);
+    mask_surface = surface_create(1024, 1024);
 }
 surface_set_target(mask_surface);
 draw_clear(c_black);
 draw_set_blend_mode(bm_subtract);
 // cut out shapes out of the mask-surface:
-draw_circle(195, 195, 60, false);
+draw_sprite(spr_HP, 0, 798, 78);
+draw_circle(798+88, 78+88, 88, false);
 //
 draw_set_blend_mode(bm_normal);
 surface_reset_target();
 
 if (!surface_exists(clip_surface)) {
     // create the clip-surface, if needed
-    clip_surface = surface_create(256, 256);
+    clip_surface = surface_create(1024, 1024);
 }
 
 // start drawing:
@@ -127,7 +130,8 @@ draw_clear_alpha(c_black, 0);
 // draw things relative to clip-surface:
 //draw_sprite(spr_HP, 0, 0, 0);
 draw_set_color(c_red);
-draw_rectangle(0, 136 + (1-obj_bird.HP/obj_bird.max_HP)*120, 256, 256, false);
+draw_rectangle(798, 78 + (1-obj_bird.HP/obj_bird.max_HP)*176, 789+176, 78+176, false);
+draw_sprite(spr_HP, 0, 798, 78);
 draw_set_color(c_white);
 // cut out the mask-surface from it:
 draw_set_blend_mode(bm_subtract);

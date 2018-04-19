@@ -41,6 +41,7 @@
       <sprite>sprites\spr_pause1</sprite>
       <sprite>sprites\spr_pause2</sprite>
       <sprite>sprites\spr_pause_menu_button</sprite>
+      <sprite>sprites\spr_HP</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
