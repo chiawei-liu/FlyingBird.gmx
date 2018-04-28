@@ -42,14 +42,20 @@
       <sprite>sprites\spr_pause2</sprite>
       <sprite>sprites\spr_pause_menu_button</sprite>
       <sprite>sprites\spr_HP</sprite>
+      <sprite>sprites\spr_title</sprite>
+      <sprite>sprites\spr_topcrown</sprite>
+      <sprite>sprites\spr_bigtopcrown</sprite>
+      <sprite>sprites\spr_restart</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
+    <background>background\bg_index</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_configs.gml</script>
+    <script>scripts\scr_record.gml</script>
     <script>scripts\scr_line_function.gml</script>
     <scripts name="scr_grp_food">
       <script>scripts\scr_create_food_linear.gml</script>
@@ -76,6 +82,8 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_scores</font>
+    <font>fonts\fangzheng48</font>
+    <font>fonts\fangzheng148</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_game_control</object>
@@ -103,6 +111,12 @@
       <object>objects\obj_black</object>
       <object>objects\obj_pause_menu</object>
       <object>objects\obj_pause_menu_button</object>
+      <object>objects\obj_index_playbutton</object>
+      <object>objects\obj_title</object>
+      <object>objects\obj_topcrown</object>
+      <object>objects\obj_bigtopcrown</object>
+      <object>objects\obj_restart</object>
+      <object>objects\obj_gameover_UI</object>
     </objects>
     <objects name="obj_grp_mode">
       <object>objects\obj_tilt_control</object>
@@ -119,13 +133,11 @@
       <object>objects\obj_sky</object>
       <object>objects\obj_sky_control</object>
     </objects>
-    <objects name="obj_index">
-      <object>objects\obj_index_playbutton</object>
-    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\index</room>
     <room>rooms\room0</room>
+    <room>rooms\gameover</room>
     <room>rooms\stage1</room>
   </rooms>
   <help>

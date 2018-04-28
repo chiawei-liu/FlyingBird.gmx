@@ -81,8 +81,8 @@ clip_surface = surface_create(1024, 1024);
             <string>/// draw score
 
 draw_set_halign(fa_left);
-draw_text(300, 148, string(obj_bird.player_score));
-draw_text(36, 148, string(obj_bird.height) + " m");
+draw_text(300, 148, string(global.score));
+draw_text(36, 148, string(global.distance) + " m");
 </string>
           </argument>
         </arguments>

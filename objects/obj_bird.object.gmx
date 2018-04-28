@@ -31,12 +31,10 @@ bird_hor_speed = global.bird_hor_speed;
 bird_ver_speed = global.bird_starting_speed;
 bird_moving_distance = global.bird_moving_distance;
 buff_speed = global.bird_buff_speed;
-player_score = 0;
 buffed = 0;
 sprStatus = -2;
 oldSprStatus = -2;
 in_tur = 0;
-height = 0;
 swipe_dir = 0;
 x_0 = x;
 max_HP = global.bird_max_HP;
@@ -224,6 +222,29 @@ if(sprStatus != oldSprStatus)
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///if gameover
+if(HP&gt;0)exit;
+room_goto(gameover);
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="3" enumb="1">
       <action>
@@ -383,7 +404,7 @@ if(!instance_place(x, y, obj_turbulence) &amp;&amp; in_tur)
 if(global.pause)
     exit;
     
-height ++;
+global.distance++;
 </string>
           </argument>
         </arguments>
@@ -406,7 +427,7 @@ height ++;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>player_score ++;
+            <string>global.score++;
 sprite_index = spr_shining;
 alarm[1] = global.buff_time;
 
