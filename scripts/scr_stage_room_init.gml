@@ -28,5 +28,33 @@ with(obj_enemy_C_model)
     j++;
 }
 
+// for turbulence_hor
+j = 0;
+with(obj_tur_hor_model)
+{
+    global.tur_hor_model[j, 0] = x;
+    global.tur_hor_model[j, 1] = y;
+    j++;
+}
+
+// for tur_ver
+j = 0;
+with(obj_tur_ver_model)
+{
+    global.tur_ver_model[j, 0] = x;
+    global.tur_ver_model[j, 1] = y;
+    j++;
+}
+
+// for cloud
+j = 0;
+with(obj_cloud_model)
+{
+    global.cloud_model[j, 0] = x;
+    global.cloud_model[j, 1] = y;
+    j++;
+}
+
+
 // go back to the main game room
 room_goto(global.main_room);

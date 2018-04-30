@@ -95,6 +95,9 @@
       <object>objects\obj_turbulence_ver</object>
       <object>objects\obj_turbulence</object>
       <object>objects\obj_cloud</object>
+      <object>objects\obj_tur_ver_model</object>
+      <object>objects\obj_tur_hor_model</object>
+      <object>objects\obj_cloud_model</object>
     </objects>
     <objects name="obj_grp_UI">
       <object>objects\obj_UI</object>
