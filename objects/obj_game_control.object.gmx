@@ -192,7 +192,8 @@ if (is_array(global.tur_ver_model))
     for(var i = 0; i &lt; array_height_2d(global.tur_ver_model); i++)
     {
         // generate new tur instances accoring to the coordinates
-        instance_create(global.tur_ver_model[i, 0], global.tur_ver_model[i, 1], obj_turbulence_ver);   
+        instance_create(global.tur_ver_model[i, 0], global.tur_ver_model[i, 1], obj_turbulence_ver);
+        
     }
     // reset the array
     global.tur_ver_model = 0;
