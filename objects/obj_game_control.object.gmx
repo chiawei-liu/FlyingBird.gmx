@@ -53,6 +53,7 @@ global.enemy_C_model = 0;
 global.tur_hor_model = 0;
 global.cloud_model = 0;
 global.tur_ver_model = 0;
+global.stage_tail = 0;
 
 
 
@@ -213,6 +214,36 @@ if (is_array(global.cloud_model))
     room_persistent = false;
 }
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// check stage end
+if( global.stage_tail &lt; 0)
+{
+    global.stage_tail += obj_bird.bird_ver_speed;
+    if(global.stage_tail &gt;= 0)
+    {
+        instance_activate_object(obj_turbulence_control);
+        instance_activate_object(obj_enemy_control);
+    }
+}
 </string>
           </argument>
         </arguments>
