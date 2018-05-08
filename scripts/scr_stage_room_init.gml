@@ -11,7 +11,6 @@ with(obj_enemy_A_model)
         global.stage_tail = y;
 }
 
-
 // for enemy B
 j = 0;
 with(obj_enemy_B_model)
@@ -47,7 +46,6 @@ with(obj_tur_hor_model)
 
 // for tur_ver
 j = 0;
-global.stage_tail = 0;
 with(obj_tur_ver_model)
 {
     global.tur_ver_model[j, 0] = x;
@@ -67,7 +65,5 @@ with(obj_cloud_model)
     if (y < global.stage_tail)
         global.stage_tail = y;
 }
-
-
 // go back to the main game room
 room_goto(global.main_room);

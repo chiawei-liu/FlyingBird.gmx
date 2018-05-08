@@ -174,12 +174,12 @@ if (is_array(global.tur_hor_model))
         with( instance_create(global.tur_hor_model[i, 0], global.tur_hor_model[i, 1], obj_turbulence_hor))
         {
             if (x &gt; 540)
-                dir = 4;
-            else
             {
                 dir = 3;
                 image_xscale = -1;
             }
+            else
+                dir = 4;
         }
     }
     // reset the array
