@@ -240,7 +240,13 @@ if(sprStatus != oldSprStatus)
             <kind>1</kind>
             <string>///if gameover
 if(HP&gt;0)exit;
-room_goto(gameover);
+if(global.score&lt;=global.best_score)room_goto(gameover1);
+else{
+    textid=file_text_open_write("bestscore.txt")
+    file_text_write_real(textid,global.score);
+    file_text_close(textid);
+    room_goto(gameover2);
+}
 </string>
           </argument>
         </arguments>

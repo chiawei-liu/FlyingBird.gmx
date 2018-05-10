@@ -117,6 +117,7 @@
       <object>objects\obj_bigtopcrown</object>
       <object>objects\obj_restart</object>
       <object>objects\obj_gameover_UI</object>
+      <object>objects\obj_index_UI</object>
     </objects>
     <objects name="obj_grp_mode">
       <object>objects\obj_tilt_control</object>
@@ -137,7 +138,8 @@
   <rooms name="rooms">
     <room>rooms\index</room>
     <room>rooms\room0</room>
-    <room>rooms\gameover</room>
+    <room>rooms\gameover1</room>
+    <room>rooms\gameover2</room>
     <room>rooms\stage1</room>
   </rooms>
   <help>

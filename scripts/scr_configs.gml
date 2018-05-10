@@ -39,10 +39,11 @@ global.enemy_wave_period_max = 300;
 global.enemy_B_ver_speed = 32;
 global.enemy_B_chasing_time = 200;
 global.enemy_C_speed = 32;
-global.enemy_A_harm = 100;
-global.enemy_B_harm = 200;
-global.enemy_C_harm = 100;
+global.enemy_A_harm = 10;
+global.enemy_B_harm = 20;
+global.enemy_C_harm = 10;
 
 // turbulenc related
 global.tur_ver_delta_speed = 20;
 global.tur_hor_delta_speed = 50;
+

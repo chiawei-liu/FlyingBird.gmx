@@ -23,9 +23,9 @@
     <glyph character="61" x="29" y="372" w="29" h="54" shift="37" offset="4"/>
     <glyph character="77" x="180" y="83" w="34" h="63" shift="37" offset="2"/>
     <glyph character="122" x="125" y="306" w="27" h="63" shift="37" offset="5"/>
+    <glyph character="115" x="305" y="306" w="26" h="64" shift="37" offset="6"/>
     <glyph character="56" x="231" y="161" w="30" h="64" shift="37" offset="4"/>
     <glyph character="35" x="39" y="83" w="35" h="63" shift="37" offset="1"/>
-    <glyph character="115" x="305" y="306" w="26" h="64" shift="37" offset="6"/>
     <glyph character="105" x="183" y="306" w="27" h="63" shift="37" offset="6"/>
     <glyph character="47" x="447" y="83" w="29" h="70" shift="37" offset="4"/>
     <glyph character="80" x="350" y="240" w="29" h="63" shift="37" offset="5"/>
@@ -34,12 +34,12 @@
     <glyph character="48" x="382" y="83" w="32" h="64" shift="37" offset="3"/>
     <glyph character="32" x="2" y="2" w="37" h="79" shift="37" offset="0"/>
     <glyph character="91" x="170" y="372" w="17" h="76" shift="37" offset="11"/>
+    <glyph character="79" x="144" y="83" w="34" h="64" shift="37" offset="2"/>
+    <glyph character="97" x="412" y="240" w="28" h="64" shift="37" offset="4"/>
     <glyph character="114" x="2" y="306" w="28" h="63" shift="37" offset="7"/>
     <glyph character="57" x="130" y="240" w="30" h="63" shift="37" offset="3"/>
-    <glyph character="98" x="226" y="240" w="29" h="63" shift="37" offset="5"/>
-    <glyph character="79" x="144" y="83" w="34" h="64" shift="37" offset="2"/>
     <glyph character="107" x="66" y="240" w="30" h="63" shift="37" offset="6"/>
-    <glyph character="97" x="412" y="240" w="28" h="64" shift="37" offset="4"/>
+    <glyph character="98" x="226" y="240" w="29" h="63" shift="37" offset="5"/>
     <glyph character="46" x="309" y="372" w="12" h="64" shift="37" offset="13"/>
     <glyph character="38" x="419" y="2" w="36" h="63" shift="37" offset="2"/>
     <glyph character="100" x="472" y="240" w="28" h="64" shift="37" offset="4"/>

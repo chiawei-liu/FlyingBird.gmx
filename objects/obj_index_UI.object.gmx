@@ -25,14 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///draw score
+            <string>//draw bestscore
 draw_set_halign(fa_middle);
-draw_set_font(fangzheng148);
-draw_text(540, 700, string(global.score));
 draw_set_font(fangzheng48);
-draw_text(540, 950, string(global.distance) + " m");
-draw_text(540, 400, string(global.best_score));
-if(global.best_score&lt;global.score)global.best_score=global.score;
+draw_text(540, 850, string(global.best_score));
 </string>
           </argument>
         </arguments>
