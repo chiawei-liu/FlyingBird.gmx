@@ -19,6 +19,15 @@
       <sprite>sprites\spr_sky_night_to_day</sprite>
       <sprite>sprites\spr_sky_day_to_night</sprite>
       <sprite>sprites\spr_sky_night</sprite>
+      <sprite>sprites\spr_sky_transform_stage1</sprite>
+      <sprite>sprites\spr_sky_transform_stage1_2</sprite>
+      <sprite>sprites\spr_sky_transform_stage2</sprite>
+      <sprite>sprites\spr_sky_transform_stage2_3</sprite>
+      <sprite>sprites\spr_sky_transform_stage3</sprite>
+      <sprite>sprites\spr_sky_transform_stage3_4</sprite>
+      <sprite>sprites\spr_sky_transform_stage4</sprite>
+      <sprite>sprites\spr_sky_transform_stage4_5</sprite>
+      <sprite>sprites\spr_sky_transform_stage5</sprite>
     </sprites>
     <sprites name="spr_grp_food">
       <sprite>sprites\sprite3</sprite>
@@ -64,7 +73,6 @@
       <script>scripts\scr_create_enemy_linear.gml</script>
       <script>scripts\scr_create_enemy_wavelike.gml</script>
     </scripts>
-    <script>scripts\scr_set_sky_sprite.gml</script>
     <scripts name="scr_grp_stage">
       <script>scripts\scr_stage_room_init.gml</script>
       <script>scripts\scr_call_enemy_from_stage.gml</script>
@@ -72,6 +80,10 @@
     <scripts name="scr_grp_turbulence">
       <script>scripts\scr_create_random_tur_ver.gml</script>
       <script>scripts\scr_create_random_tur_hor.gml</script>
+    </scripts>
+    <scripts name="scr_sky">
+      <script>scripts\scr_set_sky_sprite.gml</script>
+      <script>scripts\scr_sky_end_signal.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">

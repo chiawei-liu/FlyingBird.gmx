@@ -36,10 +36,10 @@ instance_deactivate_object(obj_tilt_control);
 instance_create(500, 1200, obj_bird);
 instance_create(0, 0, obj_food_control);
 instance_create(0, 0, obj_enemy_control);
+instance_create(0, 0, obj_sky_control);
 sky0 = instance_create(0, 1889, obj_sky);
 sky0.image_index = 8;
 sky0.image_speed = 0;
-global.current_sky_type = global.sky_type;
 instance_create(765, 32, obj_UI);
 instance_create(0, 0, obj_turbulence_control);
 alarm[2] = 300;
@@ -173,6 +173,7 @@ if (is_array(global.tur_hor_model))
         // generate new tur instances accoring to the coordinates
         with( instance_create(global.tur_hor_model[i, 0], global.tur_hor_model[i, 1], obj_turbulence_hor))
         {
+            sprite_index = global.tur_hor_model[i, 2];
             if (x &gt; 540)
             {
                 dir = 3;
@@ -193,7 +194,10 @@ if (is_array(global.tur_ver_model))
     for(var i = 0; i &lt; array_height_2d(global.tur_ver_model); i++)
     {
         // generate new tur instances accoring to the coordinates
-        instance_create(global.tur_ver_model[i, 0], global.tur_ver_model[i, 1], obj_turbulence_ver);
+        with(instance_create(global.tur_ver_model[i, 0], global.tur_ver_model[i, 1], obj_turbulence_ver))
+        {
+            sprite_index = global.tur_ver_model[i, 2];
+        }
         
     }
     // reset the array

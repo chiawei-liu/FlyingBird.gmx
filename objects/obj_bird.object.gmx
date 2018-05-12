@@ -164,6 +164,10 @@ if(global.pause)
         spr=2;
         sprite_index=spr_pause_button;
         //ds_queue_destroy(sprchange_que);
+        with(obj_sky_control)
+        {
+            transform = 2;
+        }
     }
 //}
     

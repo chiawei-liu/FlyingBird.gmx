@@ -39,6 +39,7 @@ with(obj_tur_hor_model)
 {
     global.tur_hor_model[j, 0] = x;
     global.tur_hor_model[j, 1] = y;
+    global.tur_hor_model[j, 2] = sprite_index;
     j++;
     if (y < global.stage_tail)
         global.stage_tail = y;
@@ -50,6 +51,7 @@ with(obj_tur_ver_model)
 {
     global.tur_ver_model[j, 0] = x;
     global.tur_ver_model[j, 1] = y;
+    global.tur_ver_model[j, 2] = sprite_index;
     j++;
     if (y < global.stage_tail)
         global.stage_tail = y;

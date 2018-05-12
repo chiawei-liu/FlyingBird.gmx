@@ -27,9 +27,6 @@ global.food_wave_amplitude_max = 200;
 global.food_wave_period_min = 100;
 global.food_wave_period_max = 300;
 
-// background related
-global.sky_type = 1;
-
 // enemy related
 global.enemy_spacing = 100;
 global.enemy_wave_amplitude_min = 100;

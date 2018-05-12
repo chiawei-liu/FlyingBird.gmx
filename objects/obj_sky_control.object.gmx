@@ -25,13 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sky0 = instance_create(0, 1888, obj_sky);
-sky0.image_speed = 0;
-sky1 = instance_create(0, 0, obj_sky);
-sky1.image_speed = 0;
-sky1.image_index = 1;
+            <string>sky_type = 1; // 0:day    1: dayToNight  2: Night  3:nightToDay
+transform = 0;
+mode = 1;
 
-sky_type = 0; // 0:day    1: dayToNight  2: Night  3:nightToDay
 
 </string>
           </argument>

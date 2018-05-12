@@ -28,7 +28,7 @@
             <string>vspeed = obj_bird.bird_ver_speed;
 child_created = false;
 
-show_debug_message("Sky created." + string(global.sky_type));
+show_debug_message("Sky created." + string(obj_sky_control.sky_type));
 </string>
           </argument>
         </arguments>
@@ -66,15 +66,9 @@ if(y &gt; -10 &amp;&amp; !child_created)
     child_created = true;
     if (image_index == 0)
     {
-        global.sky_type += 1;
-        if(global.sky_type &gt; 4)
-            global.sky_type = 1;
+        script_execute(scr_sky_end_signal, obj_sky_control);
     }
-    if (image_index == 0)
-    {
-        global.current_sky_type = global.sky_type;
-    }
-    script_execute(scr_set_sky_sprite, next_sky, global.current_sky_type);
+    script_execute(scr_set_sky_sprite, next_sky, obj_sky_control.sky_type);
     next_sky.image_index = image_index - 1;
     show_debug_message("-------------------------"+ string(next_sky.sprite_index)+string(next_sky.image_index));
 
