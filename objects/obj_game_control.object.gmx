@@ -33,7 +33,7 @@ global.main_room = room;
 instance_create(0, 0, obj_drag2_control);
 instance_create(0, 0, obj_tilt_control);
 instance_deactivate_object(obj_tilt_control);
-instance_create(500, 1200, obj_bird);
+instance_create(540, 1250, obj_bird);
 instance_create(0, 0, obj_food_control);
 instance_create(0, 0, obj_enemy_control);
 instance_create(0, 0, obj_sky_control);

@@ -5,4 +5,4 @@
 
 var m = (argument[3] - argument[1]) / (argument[2] - argument[0]);
 
-return (y1 + m*(argument[4] - argument[0])); 
+return ( m*(argument[4] - argument[0])); 

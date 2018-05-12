@@ -1,0 +1,14 @@
+//记录得分和飞行距离
+global.best_score=0;
+if(file_exists("bestscore.txt")){
+    textid=file_text_open_read("bestscore.txt");
+    global.best_score=file_text_read_real(textid);
+    file_text_close(textid);
+}
+else{
+    textid=file_text_open_write("bestscore.txt")
+    file_text_write_real(textid,0);
+    file_text_close(textid);
+}
+global.playerscore=0;
+global.distance=0;
