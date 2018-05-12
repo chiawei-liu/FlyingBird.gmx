@@ -7,12 +7,18 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprites name="spr_grp_bird">
-      <sprite>sprites\spr_bird</sprite>
-      <sprite>sprites\spr_shining</sprite>
-      <sprite>sprites\spr_bird_left</sprite>
-      <sprite>sprites\spr_bird_right</sprite>
-      <sprite>sprites\spr_bird_left_shining</sprite>
-      <sprite>sprites\spr_bird_right_shining</sprite>
+      <sprite>sprites\spr_bird0</sprite>
+      <sprite>sprites\spr_bird0_shining</sprite>
+      <sprite>sprites\spr_bird0_left</sprite>
+      <sprite>sprites\spr_bird0_right</sprite>
+      <sprite>sprites\spr_bird0_left_shining</sprite>
+      <sprite>sprites\spr_bird0_right_shining</sprite>
+      <sprite>sprites\spr_bird1</sprite>
+      <sprite>sprites\spr_bird1_shining</sprite>
+      <sprite>sprites\spr_bird1_left</sprite>
+      <sprite>sprites\spr_bird1_right</sprite>
+      <sprite>sprites\spr_bird1_left_shining</sprite>
+      <sprite>sprites\spr_bird1_right_shining</sprite>
     </sprites>
     <sprites name="spr_grp_background">
       <sprite>sprites\spr_sky_day</sprite>
@@ -103,6 +109,9 @@
       <object>objects\obj_turbulence_ver</object>
       <object>objects\obj_turbulence</object>
       <object>objects\obj_cloud</object>
+      <object>objects\obj_tur_ver_model</object>
+      <object>objects\obj_tur_hor_model</object>
+      <object>objects\obj_cloud_model</object>
     </objects>
     <objects name="obj_grp_UI">
       <object>objects\obj_UI</object>

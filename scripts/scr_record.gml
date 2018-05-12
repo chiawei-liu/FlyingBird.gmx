@@ -10,5 +10,5 @@ else{
     file_text_write_real(textid,0);
     file_text_close(textid);
 }
-global.score=0;
+global.playerscore=0;
 global.distance=0;

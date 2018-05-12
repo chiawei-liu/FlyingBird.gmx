@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>delta_speed = global.tur_ver_delta_speed;
+dir = 1
 image_speed = 0;
 </string>
           </argument>

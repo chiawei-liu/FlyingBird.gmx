@@ -28,11 +28,11 @@
             <string>///draw score
 draw_set_halign(fa_middle);
 draw_set_font(fangzheng148);
-draw_text(540, 700, string(global.score));
+draw_text(500, 700, string(global.playerscore));
 draw_set_font(fangzheng48);
 draw_text(540, 950, string(global.distance) + " m");
 draw_text(540, 400, string(global.best_score));
-if(global.best_score&lt;global.score)global.best_score=global.score;
+if(global.best_score&lt;global.playerscore)global.best_score=global.playerscore;
 </string>
           </argument>
         </arguments>

@@ -50,6 +50,10 @@ i = 0;
 global.enemy_A_model = 0;
 global.enemy_B_model = 0;
 global.enemy_C_model = 0;
+global.tur_hor_model = 0;
+global.cloud_model = 0;
+global.tur_ver_model = 0;
+global.stage_tail = 0;
 
 
 
@@ -150,13 +154,96 @@ if (is_array(global.enemy_C_model))
     for(var i = 0; i &lt; array_height_2d(global.enemy_C_model); i++)
     {
         // generate new enemy instances accoring to the coordinates
-        instance_create(global.enemy_C_model[i, 0], global.enemy_C_model[i, 1], obj_enemy_C);   
+        with(instance_create(global.enemy_C_model[i, 0], global.enemy_C_model[i, 1], obj_enemy_C))
+        {
+            dir = 1;
+        }
+        
     }
     // reset the array
     global.enemy_C_model = 0;
     room_persistent = false;
 }
 
+// for tur_hor
+if (is_array(global.tur_hor_model)) 
+{
+    for(var i = 0; i &lt; array_height_2d(global.tur_hor_model); i++)
+    {
+        // generate new tur instances accoring to the coordinates
+        with( instance_create(global.tur_hor_model[i, 0], global.tur_hor_model[i, 1], obj_turbulence_hor))
+        {
+            if (x &gt; 540)
+            {
+                dir = 3;
+                image_xscale = -1;
+            }
+            else
+                dir = 4;
+        }
+    }
+    // reset the array
+    global.tur_hor_model = 0;
+    room_persistent = false;
+}
+
+// for tur_ver
+if (is_array(global.tur_ver_model)) 
+{
+    for(var i = 0; i &lt; array_height_2d(global.tur_ver_model); i++)
+    {
+        // generate new tur instances accoring to the coordinates
+        instance_create(global.tur_ver_model[i, 0], global.tur_ver_model[i, 1], obj_turbulence_ver);
+        
+    }
+    // reset the array
+    global.tur_ver_model = 0;
+    room_persistent = false;
+}
+
+// for cloud
+if (is_array(global.cloud_model)) 
+{
+    for(var i = 0; i &lt; array_height_2d(global.cloud_model); i++)
+    {
+        // generate new cloud instances accoring to the coordinates
+        instance_create(global.cloud_model[i, 0], global.cloud_model[i, 1], obj_cloud);   
+    }
+    // reset the array
+    global.cloud_model = 0;
+    room_persistent = false;
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// check stage end
+if( global.stage_tail &lt; 0)
+{
+    global.stage_tail += obj_bird.bird_ver_speed;
+    if(global.stage_tail &gt;= 0)
+    {
+        instance_activate_object(obj_turbulence_control);
+        instance_activate_object(obj_enemy_control);
+    }
+}
 </string>
           </argument>
         </arguments>
