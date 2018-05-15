@@ -80,9 +80,11 @@ clip_surface = surface_create(1024, 1024);
             <kind>1</kind>
             <string>/// draw score
 
-draw_set_halign(fa_left);
-draw_text(300, 148, string(global.playerscore));
-draw_text(36, 148, string(global.distance) + " m");
+draw_set_halign(fa_right);
+draw_set_font(fnt_scores);
+draw_text(480, 132, string(global.playerscore));
+draw_set_font(fnt_distance);
+draw_text(250, 145, string(global.distance) + " m");
 </string>
           </argument>
         </arguments>

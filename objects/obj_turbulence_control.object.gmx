@@ -48,7 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var type = irandom_range(1,3);
+            <string>var type = irandom_range(1,7);
 
 switch(type)
 {
@@ -59,8 +59,22 @@ case 2:
     script_execute(scr_create_random_tur_ver);
     break;
 case 3:
-    instance_create(540, -200, obj_cloud);
+    script_execute(scr_create_random_cloud1);
     break;
+case 4:
+    script_execute(scr_create_random_cloud2);
+    break;
+case 5:
+    script_execute(scr_create_random_cloud_bottom1);
+    break;
+case 6:
+    script_execute(scr_create_random_cloud_bottom2);
+    break;    
+case 7:
+    script_execute(scr_create_random_cloud_bottom3);
+    break;    
+
+
 }
 
 alarm[0] = 100;

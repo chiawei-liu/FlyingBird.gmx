@@ -46,8 +46,12 @@
     </sprites>
     <sprites name="spr_grp_turbulence">
       <sprite>sprites\spr_tur_hor</sprite>
-      <sprite>sprites\spr_cloud</sprite>
+      <sprite>sprites\spr_cloud1</sprite>
+      <sprite>sprites\spr_cloud2</sprite>
       <sprite>sprites\spr_tur_ver</sprite>
+      <sprite>sprites\spr_cloud_bottom1</sprite>
+      <sprite>sprites\spr_cloud_bottom2</sprite>
+      <sprite>sprites\spr_cloud_bottom3</sprite>
     </sprites>
     <sprites name="spr_grp_UI">
       <sprite>sprites\spr_pause_button</sprite>
@@ -97,9 +101,17 @@
       <script>scripts\scr_set_sky_sprite.gml</script>
       <script>scripts\scr_sky_end_signal.gml</script>
     </scripts>
+    <scripts name="scr_cloud">
+      <script>scripts\scr_create_random_cloud1.gml</script>
+      <script>scripts\scr_create_random_cloud2.gml</script>
+      <script>scripts\scr_create_random_cloud_bottom1.gml</script>
+      <script>scripts\scr_create_random_cloud_bottom2.gml</script>
+      <script>scripts\scr_create_random_cloud_bottom3.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_scores</font>
+    <font>fonts\fnt_distance</font>
     <font>fonts\fangzheng48</font>
     <font>fonts\fangzheng148</font>
   </fonts>
@@ -120,10 +132,18 @@
       <object>objects\obj_turbulence_hor</object>
       <object>objects\obj_turbulence_ver</object>
       <object>objects\obj_turbulence</object>
-      <object>objects\obj_cloud</object>
+      <object>objects\obj_cloud1</object>
+      <object>objects\obj_cloud2</object>
+      <object>objects\obj_cloud_bottom1</object>
+      <object>objects\obj_cloud_bottom2</object>
+      <object>objects\obj_cloud_bottom3</object>
       <object>objects\obj_tur_ver_model</object>
       <object>objects\obj_tur_hor_model</object>
       <object>objects\obj_cloud_model</object>
+      <objects name="obj_sky">
+        <object>objects\obj_sky</object>
+        <object>objects\obj_sky_control</object>
+      </objects>
     </objects>
     <objects name="obj_grp_UI">
       <object>objects\obj_UI</object>
@@ -151,10 +171,6 @@
       <object>objects\obj_food_control</object>
     </objects>
     <object>objects\obj_clipTest</object>
-    <objects name="obj_sky">
-      <object>objects\obj_sky</object>
-      <object>objects\obj_sky_control</object>
-    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\index</room>
