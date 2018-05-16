@@ -84,6 +84,15 @@
     <instance objName="obj_enemy_C_model" x="712" y="-6128" name="inst_121FA92E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy_C_model" x="376" y="-8552" name="inst_21BAA7CF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tur_ver_model" x="944" y="-8216" name="inst_6C306F9E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_food_model" x="280" y="-816" name="inst_FA8BFE63" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_food_model" x="392" y="-864" name="inst_26F237AD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_food_model" x="456" y="-800" name="inst_12AAA7C5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_food_model" x="544" y="-848" name="inst_147DFF72" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_food_model" x="536" y="-736" name="inst_04B9A6E7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_food_model" x="656" y="-784" name="inst_5A062642" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_food_model" x="776" y="-848" name="inst_89920DFB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_food_model" x="536" y="-936" name="inst_23B5E268" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_food_model" x="376" y="-936" name="inst_BCE060E4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

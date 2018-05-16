@@ -9,4 +9,5 @@ room_goto(asset_get_index("stage" + string(stage_index)));
 
 instance_deactivate_object(obj_enemy_control);
 instance_deactivate_object(obj_turbulence_control);
+instance_deactivate_object(obj_food_control);
 room_goto(asset_get_index("stage" + string(stage_index)));
