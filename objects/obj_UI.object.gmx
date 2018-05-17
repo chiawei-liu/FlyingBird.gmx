@@ -31,6 +31,7 @@ instance_create(991, 123, obj_pause_button);
 instance_create(0, 129, obj_scorebox);
 mask_surface = surface_create(1024, 1024);
 clip_surface = surface_create(1024, 1024);
+hp_index = 0;
 </string>
           </argument>
         </arguments>
@@ -56,6 +57,8 @@ clip_surface = surface_create(1024, 1024);
             <string>//show_debug_message("draw score. ");
 ///show_debug_message(string(obj_bird.player_score));
 //draw_text(50, 50, string(obj_bird.player_score));
+
+hp_index += 1;
 </string>
           </argument>
         </arguments>
@@ -115,7 +118,7 @@ surface_set_target(mask_surface);
 draw_clear(c_black);
 draw_set_blend_mode(bm_subtract);
 // cut out shapes out of the mask-surface:
-draw_sprite(spr_HP, 0, 798, 78);
+draw_sprite(spr_hp_frame, 0, 798, 78);
 draw_circle(798+88, 78+88, 88, false);
 //
 draw_set_blend_mode(bm_normal);
@@ -131,10 +134,11 @@ surface_set_target(clip_surface);
 draw_clear_alpha(c_black, 0);
 // draw things relative to clip-surface:
 //draw_sprite(spr_HP, 0, 0, 0);
-draw_set_color(c_red);
-draw_rectangle(798, 78 + (1-obj_bird.HP/obj_bird.max_HP)*176, 789+176, 78+176, false);
-draw_sprite(spr_HP, 0, 798, 78);
 draw_set_color(c_white);
+draw_rectangle(798, 78 + (1-obj_bird.HP/obj_bird.max_HP)*176, 789+176, 78+176, false);
+draw_sprite(spr_hp, hp_index, 798+88, 78 + (1-obj_bird.HP/obj_bird.max_HP)*176 - 5);
+draw_sprite(spr_hp_frame, 0, 798, 78);
+
 // cut out the mask-surface from it:
 draw_set_blend_mode(bm_subtract);
 draw_surface(mask_surface, 0, 0);

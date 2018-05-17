@@ -80,11 +80,12 @@
       <sprite>sprites\spr_pause1</sprite>
       <sprite>sprites\spr_pause2</sprite>
       <sprite>sprites\spr_pause_menu_button</sprite>
-      <sprite>sprites\spr_HP</sprite>
+      <sprite>sprites\spr_hp_frame</sprite>
       <sprite>sprites\spr_title</sprite>
       <sprite>sprites\spr_topcrown</sprite>
       <sprite>sprites\spr_bigtopcrown</sprite>
       <sprite>sprites\spr_restart</sprite>
+      <sprite>sprites\spr_hp</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
