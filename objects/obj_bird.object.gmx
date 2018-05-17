@@ -152,7 +152,7 @@ if(x - sprite_get_width(sprite_index)/2 + hspeed &lt; 0)
 if(global.pause)
     exit;
 
-if(spr&lt;=0){
+if(spr&lt;=2){
     sprchange_que_total+=getfood;
     ds_queue_enqueue(sprchange_que,getfood);
     if(ds_queue_size(sprchange_que)&gt;global.sprchange_frame){
@@ -160,10 +160,11 @@ if(spr&lt;=0){
     }
     if(sprchange_que_total&gt;=global.sprchange_food){//变身
         spr+=1;
-        //ds_queue_destroy(sprchange_que);
+        ds_queue_clear(sprchange_que);
+        sprchange_que_total=0;
         with(obj_sky_control)
         {
-            transform = 2;
+            transform +=1;
         }
     }
 }
@@ -196,28 +197,40 @@ if(sprStatus != oldSprStatus)
     switch(sprStatus)
     {
     case -3:
-        if(spr==1)sprite_index = spr_bird1_right; 
-        else sprite_index = spr_bird0_right;
+        if(spr==0)sprite_index = spr_bird0_right;
+        else if(spr==1)sprite_index = spr_bird1_right; 
+        else if(spr==2)sprite_index = spr_bird2_right;
+        else sprite_index = spr_bird3_right;
         break;
     case -2:
-        if(spr==1)sprite_index = spr_bird1; 
-        else sprite_index = spr_bird0;
+        if(spr==0)sprite_index = spr_bird0;
+        else if(spr==1)sprite_index = spr_bird1; 
+        else if(spr==2)sprite_index = spr_bird2;
+        else sprite_index = spr_bird3;
         break;
     case -1:
-        if(spr==1)sprite_index = spr_bird1_left; 
-        else sprite_index = spr_bird0_left;
+        if(spr==0)sprite_index = spr_bird0_left;
+        else if(spr==1)sprite_index = spr_bird1_left; 
+        else if(spr==2)sprite_index = spr_bird2_left;
+        else sprite_index = spr_bird3_left;
         break;
     case 1: 
-        if(spr==1)sprite_index = spr_bird1_left_shining;            
-        else sprite_index = spr_bird0_left_shining;
+        if(spr==0)sprite_index = spr_bird0_left_shining;
+        else if(spr==1)sprite_index = spr_bird1_left_shining; 
+        else if(spr==2)sprite_index = spr_bird2_left_shining;
+        else sprite_index = spr_bird3_left_shining;
         break;
     case 2:
-        if(spr==1)sprite_index = spr_bird1_shining; 
-        else sprite_index = spr_bird0_shining;
+        if(spr==0)sprite_index = spr_bird0_shining;
+        else if(spr==1)sprite_index = spr_bird1_shining; 
+        else if(spr==2)sprite_index = spr_bird2_shining;
+        else sprite_index = spr_bird3_shining;
         break;
     case 3:
-        if(spr==1)sprite_index = spr_bird1_right_shining; 
-        else sprite_index = spr_bird0_right_shining;
+        if(spr==0)sprite_index = spr_bird0_right_shining;
+        else if(spr==1)sprite_index = spr_bird1_right_shining; 
+        else if(spr==2)sprite_index = spr_bird2_right_shining;
+        else sprite_index = spr_bird3_right_shining;
         break;
     }
     if(oldSprStatus == -sprStatus)
