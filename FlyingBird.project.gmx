@@ -7,18 +7,38 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprites name="spr_grp_bird">
-      <sprite>sprites\spr_bird0</sprite>
-      <sprite>sprites\spr_bird0_shining</sprite>
-      <sprite>sprites\spr_bird0_left</sprite>
-      <sprite>sprites\spr_bird0_right</sprite>
-      <sprite>sprites\spr_bird0_left_shining</sprite>
-      <sprite>sprites\spr_bird0_right_shining</sprite>
-      <sprite>sprites\spr_bird1</sprite>
-      <sprite>sprites\spr_bird1_shining</sprite>
-      <sprite>sprites\spr_bird1_left</sprite>
-      <sprite>sprites\spr_bird1_right</sprite>
-      <sprite>sprites\spr_bird1_left_shining</sprite>
-      <sprite>sprites\spr_bird1_right_shining</sprite>
+      <sprites name="spr_bird0">
+        <sprite>sprites\spr_bird0</sprite>
+        <sprite>sprites\spr_bird0_shining</sprite>
+        <sprite>sprites\spr_bird0_left</sprite>
+        <sprite>sprites\spr_bird0_left_shining</sprite>
+        <sprite>sprites\spr_bird0_right</sprite>
+        <sprite>sprites\spr_bird0_right_shining</sprite>
+      </sprites>
+      <sprites name="spr_bird1">
+        <sprite>sprites\spr_bird1</sprite>
+        <sprite>sprites\spr_bird1_shining</sprite>
+        <sprite>sprites\spr_bird1_left</sprite>
+        <sprite>sprites\spr_bird1_left_shining</sprite>
+        <sprite>sprites\spr_bird1_right</sprite>
+        <sprite>sprites\spr_bird1_right_shining</sprite>
+      </sprites>
+      <sprites name="spr_bird2">
+        <sprite>sprites\spr_bird2</sprite>
+        <sprite>sprites\spr_bird2_shining</sprite>
+        <sprite>sprites\spr_bird2_left</sprite>
+        <sprite>sprites\spr_bird2_left_shining</sprite>
+        <sprite>sprites\spr_bird2_right</sprite>
+        <sprite>sprites\spr_bird2_right_shining</sprite>
+      </sprites>
+      <sprites name="spr_bird3">
+        <sprite>sprites\spr_bird3</sprite>
+        <sprite>sprites\spr_bird3_shining</sprite>
+        <sprite>sprites\spr_bird3_left</sprite>
+        <sprite>sprites\spr_bird3_left_shining</sprite>
+        <sprite>sprites\spr_bird3_right</sprite>
+        <sprite>sprites\spr_bird3_right_shining</sprite>
+      </sprites>
     </sprites>
     <sprites name="spr_grp_background">
       <sprite>sprites\spr_sky_day</sprite>
@@ -114,6 +134,7 @@
     <font>fonts\fnt_distance</font>
     <font>fonts\fangzheng48</font>
     <font>fonts\fangzheng148</font>
+    <font>fonts\font4</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_game_control</object>
