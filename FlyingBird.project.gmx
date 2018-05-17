@@ -150,6 +150,7 @@
     </objects>
     <objects name="obj_grp_turbulence">
       <object>objects\obj_turbulence_control</object>
+      <object>objects\obj_cloud_base</object>
       <object>objects\obj_turbulence_hor</object>
       <object>objects\obj_turbulence_ver</object>
       <object>objects\obj_turbulence</object>
@@ -186,10 +187,12 @@
       <object>objects\obj_swipe_control</object>
       <object>objects\obj_drag_control</object>
       <object>objects\obj_drag2_control</object>
+      <object>objects\obj_player_controller</object>
     </objects>
     <objects name="obj_grp_food">
       <object>objects\obj_food</object>
       <object>objects\obj_food_control</object>
+      <object>objects\obj_food_model</object>
     </objects>
     <object>objects\obj_clipTest</object>
   </objects>

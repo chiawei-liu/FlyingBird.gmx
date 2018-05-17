@@ -67,5 +67,17 @@ with(obj_cloud_model)
     if (y < global.stage_tail)
         global.stage_tail = y;
 }
+
+// for food
+j = 0;
+with(obj_food_model)
+{
+    global.food_model[j, 0] = x;
+    global.food_model[j, 1] = y;
+    j++;
+    if (y < global.stage_tail)
+        global.stage_tail = y;
+}
 // go back to the main game room
 room_goto(global.main_room);
+

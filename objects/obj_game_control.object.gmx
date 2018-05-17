@@ -53,6 +53,7 @@ global.enemy_C_model = 0;
 global.tur_hor_model = 0;
 global.cloud_model = 0;
 global.tur_ver_model = 0;
+global.food_model = 0;
 global.stage_tail = 0;
 
 
@@ -117,7 +118,8 @@ script_execute(scr_call_enemy_from_stage, 1);
           <argument>
             <kind>1</kind>
             <string>/// generate stage enemy
-
+if(global.pause)
+    exit;
 // if coming back from other stage rooms, 
 // the enemy model will be an array containing the coordinate info
 
@@ -218,6 +220,18 @@ if (is_array(global.cloud_model))
     room_persistent = false;
 }
 
+// for food
+if (is_array(global.food_model)) 
+{
+    for(var i = 0; i &lt; array_height_2d(global.food_model); i++)
+    {
+        // generate new cloud instances accoring to the coordinates
+        instance_create(global.food_model[i, 0], global.food_model[i, 1], obj_food);   
+    }
+    // reset the array
+    global.food_model = 0;
+    room_persistent = false;
+}
 </string>
           </argument>
         </arguments>
