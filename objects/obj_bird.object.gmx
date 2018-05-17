@@ -164,7 +164,7 @@ if(spr&lt;=2){
         sprchange_que_total=0;
         with(obj_sky_control)
         {
-            transform +=1;
+            transform = 2;
         }
     }
 }
