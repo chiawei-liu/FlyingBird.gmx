@@ -16,7 +16,7 @@ with(obj_sky_control)
     }
     if (mode == 2)
     {
-        if(transform > 0)
+        if(sky_type < 12 && transform > 0)
         {
             sky_type += 1;
             transform -= 1;

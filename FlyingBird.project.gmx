@@ -139,6 +139,10 @@
   <objects name="objects">
     <object>objects\obj_game_control</object>
     <object>objects\obj_bird</object>
+    <objects name="obj_sky">
+      <object>objects\obj_sky</object>
+      <object>objects\obj_sky_control</object>
+    </objects>
     <objects name="obj_grp_enemy">
       <object>objects\obj_enemy_A</object>
       <object>objects\obj_enemy_B</object>
@@ -162,10 +166,6 @@
       <object>objects\obj_tur_ver_model</object>
       <object>objects\obj_tur_hor_model</object>
       <object>objects\obj_cloud_model</object>
-      <objects name="obj_sky">
-        <object>objects\obj_sky</object>
-        <object>objects\obj_sky_control</object>
-      </objects>
     </objects>
     <objects name="obj_grp_UI">
       <object>objects\obj_UI</object>

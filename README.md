@@ -10,7 +10,7 @@ This source is used for version control of the code between the developers in th
 
 
 
-To develop and run, download this project and manually put in the folders `sprites/` and `background/` that includes all the images needed, then open `/FlyingBird.project.gmx` by gamemaker 1.
+To develop and run, download this project and manually put in the folders `sprites/images` and `background/images` that includes all the images needed, then open `/FlyingBird.project.gmx` by gamemaker 1.
 
 ------
 
