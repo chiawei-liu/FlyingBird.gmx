@@ -42,8 +42,7 @@ HP = global.bird_max_HP;
 sprchange_que=ds_queue_create();//存储在最近global.sprchange_frame帧内每一帧吃到的豆豆
 sprchange_que_total=0;//队列sprchange_que的和，&gt;=global.sprchange_food时变身
 getfood=0;//这一帧吃了几个豆豆
-spr=0;
-alarm3=0;
+spr=0;//0没变身，1变身了
 </string>
           </argument>
         </arguments>
@@ -153,7 +152,7 @@ if(x - sprite_get_width(sprite_index)/2 + hspeed &lt; 0)
 if(global.pause)
     exit;
 
-if(spr&lt;=3 &amp;&amp; alarm3==0){
+if(spr&lt;=2){
     sprchange_que_total+=getfood;
     ds_queue_enqueue(sprchange_que,getfood);
     if(ds_queue_size(sprchange_que)&gt;global.sprchange_frame){
@@ -163,11 +162,10 @@ if(spr&lt;=3 &amp;&amp; alarm3==0){
         spr+=1;
         ds_queue_clear(sprchange_que);
         sprchange_que_total=0;
-        alarm3=17;
-        sprite_index=spr_bird_change;
         with(obj_sky_control)
         {
-            transform +=1;
+            if (transform == 0)
+                transform = 2;
         }
     }
 }
@@ -176,10 +174,7 @@ delta_x = x - x_0;
 x_0 = x;
 old_image_index = image_index;
 
-if(alarm3&gt;0){
-    sprStatus=4;
-}
-else if(buffed)
+if(buffed)
 {
     if(delta_x &gt;0)
         sprStatus = 3;
@@ -198,7 +193,7 @@ else
         sprStatus = -1;
 }
 
-if(sprStatus != oldSprStatus &amp;&amp;alarm3==0)
+if(sprStatus != oldSprStatus)
 {
     switch(sprStatus)
     {
@@ -243,7 +238,7 @@ if(sprStatus != oldSprStatus &amp;&amp;alarm3==0)
         image_index = old_image_index;
     oldSprStatus = sprStatus;
 }
-if(alarm3&gt;0)alarm3-=1;
+
 </string>
           </argument>
         </arguments>
@@ -364,7 +359,6 @@ if(global.pause)
 {
     alarm[1] += 1;
     alarm[2] += 1;
-    alarm3 += 1;
     x -= hspeed;
 }
 </string>
@@ -411,6 +405,7 @@ if(!instance_place(x, y, obj_turbulence) &amp;&amp; in_tur)
     in_tur = 0;
     dir = 0;
     delta_speed = 0;
+    /*
     if(global.mode == 1)
     {
         instance_activate_object(obj_drag2_control);
@@ -419,6 +414,7 @@ if(!instance_place(x, y, obj_turbulence) &amp;&amp; in_tur)
     {
         instance_activate_object(obj_tilt_control);
     }
+    */
 }
 </string>
           </argument>
@@ -504,6 +500,7 @@ getfood+=1;
 if(in_tur == 0)
 {
     // set to forward
+    /*
     switch (obj_player_controller.preDir)
     {
         case 1:
@@ -514,8 +511,8 @@ if(in_tur == 0)
             break;
     }        
     obj_player_controller.preDir = 0;
-    
-    instance_deactivate_object(obj_player_controller);
+    */
+    //instance_deactivate_object(obj_player_controller);
     
     delta_speed = other.delta_speed;
     dir = other.dir;
