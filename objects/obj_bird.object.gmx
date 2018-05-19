@@ -164,7 +164,8 @@ if(spr&lt;=2){
         sprchange_que_total=0;
         with(obj_sky_control)
         {
-            transform = 2;
+            if (transform == 0)
+                transform = 2;
         }
     }
 }
@@ -404,6 +405,7 @@ if(!instance_place(x, y, obj_turbulence) &amp;&amp; in_tur)
     in_tur = 0;
     dir = 0;
     delta_speed = 0;
+    /*
     if(global.mode == 1)
     {
         instance_activate_object(obj_drag2_control);
@@ -412,6 +414,7 @@ if(!instance_place(x, y, obj_turbulence) &amp;&amp; in_tur)
     {
         instance_activate_object(obj_tilt_control);
     }
+    */
 }
 </string>
           </argument>
@@ -497,6 +500,7 @@ getfood+=1;
 if(in_tur == 0)
 {
     // set to forward
+    /*
     switch (obj_player_controller.preDir)
     {
         case 1:
@@ -507,8 +511,8 @@ if(in_tur == 0)
             break;
     }        
     obj_player_controller.preDir = 0;
-    
-    instance_deactivate_object(obj_player_controller);
+    */
+    //instance_deactivate_object(obj_player_controller);
     
     delta_speed = other.delta_speed;
     dir = other.dir;
