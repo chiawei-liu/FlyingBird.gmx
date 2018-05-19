@@ -42,7 +42,7 @@ HP = global.bird_max_HP;
 sprchange_que=ds_queue_create();//存储在最近global.sprchange_frame帧内每一帧吃到的豆豆
 sprchange_que_total=0;//队列sprchange_que的和，&gt;=global.sprchange_food时变身
 getfood=0;//这一帧吃了几个豆豆
-spr=0;//0没变身，1变身了
+spr=0;
 </string>
           </argument>
         </arguments>
@@ -162,6 +162,7 @@ if(spr&lt;=2){
         spr+=1;
         ds_queue_clear(sprchange_que);
         sprchange_que_total=0;
+        instance_create(0,0,obj_bird_change);
         with(obj_sky_control)
         {
             if (transform == 0)

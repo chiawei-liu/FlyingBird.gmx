@@ -197,6 +197,7 @@
       <object>objects\obj_food_model</object>
     </objects>
     <object>objects\obj_clipTest</object>
+    <object>objects\obj_bird_change</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\index</room>
