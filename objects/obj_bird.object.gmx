@@ -42,7 +42,8 @@ HP = global.bird_max_HP;
 sprchange_que=ds_queue_create();//存储在最近global.sprchange_frame帧内每一帧吃到的豆豆
 sprchange_que_total=0;//队列sprchange_que的和，&gt;=global.sprchange_food时变身
 getfood=0;//这一帧吃了几个豆豆
-spr=0;//0没变身，1变身了
+spr=0;
+alarm3=0;
 </string>
           </argument>
         </arguments>
@@ -152,7 +153,7 @@ if(x - sprite_get_width(sprite_index)/2 + hspeed &lt; 0)
 if(global.pause)
     exit;
 
-if(spr&lt;=2){
+if(spr&lt;=3 &amp;&amp; alarm3==0){
     sprchange_que_total+=getfood;
     ds_queue_enqueue(sprchange_que,getfood);
     if(ds_queue_size(sprchange_que)&gt;global.sprchange_frame){
@@ -162,9 +163,11 @@ if(spr&lt;=2){
         spr+=1;
         ds_queue_clear(sprchange_que);
         sprchange_que_total=0;
+        alarm3=17;
+        sprite_index=spr_bird_change;
         with(obj_sky_control)
         {
-            transform = 2;
+            transform +=1;
         }
     }
 }
@@ -173,7 +176,10 @@ delta_x = x - x_0;
 x_0 = x;
 old_image_index = image_index;
 
-if(buffed)
+if(alarm3&gt;0){
+    sprStatus=4;
+}
+else if(buffed)
 {
     if(delta_x &gt;0)
         sprStatus = 3;
@@ -192,7 +198,7 @@ else
         sprStatus = -1;
 }
 
-if(sprStatus != oldSprStatus)
+if(sprStatus != oldSprStatus &amp;&amp;alarm3==0)
 {
     switch(sprStatus)
     {
@@ -237,7 +243,7 @@ if(sprStatus != oldSprStatus)
         image_index = old_image_index;
     oldSprStatus = sprStatus;
 }
-
+if(alarm3&gt;0)alarm3-=1;
 </string>
           </argument>
         </arguments>
@@ -358,6 +364,7 @@ if(global.pause)
 {
     alarm[1] += 1;
     alarm[2] += 1;
+    alarm3 += 1;
     x -= hspeed;
 }
 </string>

@@ -39,6 +39,7 @@
         <sprite>sprites\spr_bird3_right</sprite>
         <sprite>sprites\spr_bird3_right_shining</sprite>
       </sprites>
+      <sprite>sprites\spr_bird_change</sprite>
     </sprites>
     <sprites name="spr_grp_background">
       <sprite>sprites\spr_sky_day</sprite>
