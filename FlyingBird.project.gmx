@@ -103,6 +103,17 @@
       <sprite>sprites\spr_restart</sprite>
       <sprite>sprites\spr_hp</sprite>
     </sprites>
+    <sprites name="spr_grp_picture">
+      <sprite>sprites\spr_dead1</sprite>
+      <sprite>sprites\spr_dead2</sprite>
+      <sprite>sprites\spr_tur1</sprite>
+      <sprite>sprites\spr_intur1</sprite>
+      <sprite>sprites\spr_aftertur1</sprite>
+      <sprite>sprites\spr_intur2</sprite>
+      <sprite>sprites\spr_aftertur2_1</sprite>
+      <sprite>sprites\spr_band</sprite>
+      <sprite>sprites\spr_aftertur2_2</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -225,6 +236,17 @@
     </objects>
     <object>objects\obj_clipTest</object>
     <object>objects\obj_bird_change</object>
+    <objects name="obj_grp_picture">
+      <object>objects\obj_dead1</object>
+      <object>objects\obj_dead2</object>
+      <object>objects\obj_tur1</object>
+      <object>objects\obj_intur1</object>
+      <object>objects\obj_aftertur1</object>
+      <object>objects\obj_intur2</object>
+      <object>objects\obj_aftertur2_1</object>
+      <object>objects\obj_aftertur2_2</object>
+      <object>objects\obj_band</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\index</room>

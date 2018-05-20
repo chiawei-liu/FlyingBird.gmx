@@ -258,6 +258,7 @@ if(sprStatus != oldSprStatus)
             <kind>1</kind>
             <string>///if gameover
 if(HP&gt;0)exit;
+global.deadtime+=1;
 audio_stop_sound(sou_bgm1);
 audio_stop_sound(sou_bgm2);
 audio_play_sound(sou_gameover,0,0);
