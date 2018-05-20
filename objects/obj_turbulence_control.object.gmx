@@ -59,22 +59,45 @@ case 2:
     script_execute(scr_create_random_tur_ver);
     break;
 case 3:
-    script_execute(scr_create_random_cloud1);
+    if(obj_sky_control.sky_type == 8)
+        break;
+    else if (obj_sky_control.sky_type == 12)
+        script_execute(scr_create_random_aurora1);
+    else    
+        script_execute(scr_create_random_cloud1);
     break;
 case 4:
-    script_execute(scr_create_random_cloud2);
+    if(obj_sky_control.sky_type == 8)
+        break;
+    else if (obj_sky_control.sky_type == 12)
+        script_execute(scr_create_random_aurora1);
+    else    
+        script_execute(scr_create_random_cloud2);
     break;
 case 5:
-    script_execute(scr_create_random_cloud_bottom1);
+    if(obj_sky_control.sky_type == 8)
+        break;
+    else if (obj_sky_control.sky_type == 12)
+        script_execute(scr_create_random_aurora_bottom1);
+    else
+        script_execute(scr_create_random_cloud_bottom1);
     break;
 case 6:
-    script_execute(scr_create_random_cloud_bottom2);
+    if(obj_sky_control.sky_type == 8)
+        break;
+    else if (obj_sky_control.sky_type == 12)
+        script_execute(scr_create_random_aurora_bottom1);
+    else    
+        script_execute(scr_create_random_cloud_bottom2);
     break;    
 case 7:
-    script_execute(scr_create_random_cloud_bottom3);
+    if(obj_sky_control.sky_type == 8)
+        break;
+    else if (obj_sky_control.sky_type == 12)
+        script_execute(scr_create_random_aurora_bottom1);
+    else  
+        script_execute(scr_create_random_cloud_bottom3);
     break;    
-
-
 }
 
 alarm[0] = 100;

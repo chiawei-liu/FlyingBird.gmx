@@ -73,6 +73,10 @@
       <sprite>sprites\spr_cloud_bottom1</sprite>
       <sprite>sprites\spr_cloud_bottom2</sprite>
       <sprite>sprites\spr_cloud_bottom3</sprite>
+      <sprite>sprites\spr_aurora_bottom</sprite>
+      <sprite>sprites\spr_aurora1</sprite>
+      <sprite>sprites\spr_aurora2</sprite>
+      <sprite>sprites\spr_aurora3</sprite>
     </sprites>
     <sprites name="spr_grp_UI">
       <sprite>sprites\spr_pause_button</sprite>
@@ -129,6 +133,10 @@
       <script>scripts\scr_create_random_cloud_bottom1.gml</script>
       <script>scripts\scr_create_random_cloud_bottom2.gml</script>
       <script>scripts\scr_create_random_cloud_bottom3.gml</script>
+      <script>scripts\scr_create_random_aurora_bottom1.gml</script>
+      <script>scripts\scr_create_random_aurora1.gml</script>
+      <script>scripts\scr_create_random_aurora2.gml</script>
+      <script>scripts\scr_create_random_aurora3.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -168,6 +176,10 @@
       <object>objects\obj_tur_ver_model</object>
       <object>objects\obj_tur_hor_model</object>
       <object>objects\obj_cloud_model</object>
+      <object>objects\obj_aurora_bottom</object>
+      <object>objects\obj_aurora1</object>
+      <object>objects\obj_aurora2</object>
+      <object>objects\obj_aurora3</object>
     </objects>
     <objects name="obj_grp_UI">
       <object>objects\obj_UI</object>

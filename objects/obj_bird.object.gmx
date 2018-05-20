@@ -158,16 +158,13 @@ if(spr&lt;=2){
     if(ds_queue_size(sprchange_que)&gt;global.sprchange_frame){
         sprchange_que_total-=ds_queue_dequeue(sprchange_que);
     }
-    if(sprchange_que_total&gt;=global.sprchange_food){//变身
+    if(sprchange_que_total&gt;=global.sprchange_food &amp;&amp; obj_sky_control.transform == 0){//变身
         spr+=1;
         ds_queue_clear(sprchange_que);
         sprchange_que_total=0;
         instance_create(0,0,obj_bird_change);
-        with(obj_sky_control)
-        {
-            if (transform == 0)
-                transform = 2;
-        }
+        obj_sky_control.transform = 2;
+
     }
 }
     

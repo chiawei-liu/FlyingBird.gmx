@@ -18,6 +18,8 @@ with(obj_sky_control)
     {
         if(sky_type < 12 && transform > 0)
         {
+            if(sky_type == 8)
+                transform = 4;   // skeep stage 4
             sky_type += 1;
             transform -= 1;
             show_debug_message("    transform: " + string(transform));
