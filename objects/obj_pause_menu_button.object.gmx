@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>switch(action)
+            <string>script_execute(scr_touchsound);
+
+switch(action)
 {
 case 1:
     global.pause = false;

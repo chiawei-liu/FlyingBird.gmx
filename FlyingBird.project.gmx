@@ -4,7 +4,18 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sou_eatfood</sound>
+    <sound>sound\sou_wind</sound>
+    <sound>sound\sou_touch0</sound>
+    <sound>sound\sou_touch1</sound>
+    <sound>sound\sou_touch2</sound>
+    <sounds name="sou_bgm">
+      <sound>sound\sou_bgm1</sound>
+      <sound>sound\sou_bgm2</sound>
+      <sound>sound\sou_gameover</sound>
+    </sounds>
+  </sounds>
   <sprites name="sprites">
     <sprites name="spr_grp_bird">
       <sprites name="spr_bird0">
@@ -99,8 +110,9 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_configs.gml</script>
+    <script>scripts\scr_init.gml</script>
     <script>scripts\scr_record.gml</script>
+    <script>scripts\scr_configs.gml</script>
     <script>scripts\scr_line_function.gml</script>
     <scripts name="scr_grp_food">
       <script>scripts\scr_create_food_linear.gml</script>
@@ -137,6 +149,9 @@
       <script>scripts\scr_create_random_aurora1.gml</script>
       <script>scripts\scr_create_random_aurora2.gml</script>
       <script>scripts\scr_create_random_aurora3.gml</script>
+    </scripts>
+    <scripts name="scr_sound">
+      <script>scripts\scr_touchsound.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">

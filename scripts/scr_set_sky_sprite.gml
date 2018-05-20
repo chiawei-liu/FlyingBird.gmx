@@ -41,6 +41,8 @@ switch(sky_type)
         break;
     case 12:
         sky.sprite_index = spr_sky_transform_stage5;
+        audio_sound_gain(sou_bgm1,0,2000);
+        audio_play_sound(sou_bgm2,1,1);
         break;
     
 }

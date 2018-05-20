@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>///game restart
+audio_play_sound(sou_bgm1,1,1);
+script_execute(scr_touchsound);
 room_goto(room0);
 </string>
           </argument>

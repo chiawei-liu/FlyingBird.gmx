@@ -51,7 +51,8 @@ active = true;
             <kind>1</kind>
             <string>if(!active)
     exit;
-
+    
+script_execute(scr_touchsound);
 global.pause = true;
 obj_bird.image_speed = 0;
 with(obj_turbulence_hor)
@@ -66,6 +67,7 @@ with(obj_turbulence_ver)
 
 instance_create(266, 418, obj_pause_menu);
 active = false;
+
 </string>
           </argument>
         </arguments>

@@ -164,7 +164,6 @@ if(spr&lt;=2){
         sprchange_que_total=0;
         instance_create(0,0,obj_bird_change);
         obj_sky_control.transform = 2;
-
     }
 }
     
@@ -259,6 +258,9 @@ if(sprStatus != oldSprStatus)
             <kind>1</kind>
             <string>///if gameover
 if(HP&gt;0)exit;
+audio_stop_sound(sou_bgm1);
+audio_stop_sound(sou_bgm2);
+audio_play_sound(sou_gameover,0,0);
 if(global.playerscore&lt;=global.best_score)room_goto(gameover1);
 else{
     textid=file_text_open_write("bestscore.txt")
@@ -472,6 +474,7 @@ if(buffed == 0)
 buffed = 1;
 getfood+=1;
 
+audio_play_sound(sou_eatfood,0,0);
 </string>
           </argument>
         </arguments>
@@ -532,6 +535,7 @@ if(in_tur == 0)
     in_tur = 1;
 }
 
+audio_play_sound(sou_wind,0,0);
 
 
 

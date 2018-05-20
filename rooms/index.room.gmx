@@ -10,7 +10,9 @@
   <persistent>0</persistent>
   <colour>13132900</colour>
   <showcolour>-1</showcolour>
-  <code>script_execute(scr_record);
+  <code>script_execute(scr_init);
+script_execute(scr_record);
+audio_play_sound(sou_bgm1,1,1);
 instance_create(0,0,obj_index_UI);</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>

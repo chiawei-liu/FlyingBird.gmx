@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///game start
+script_execute(scr_touchsound);
 room_goto(room0);
 </string>
           </argument>
